@@ -57,16 +57,19 @@ const Balloon = ({ color, x, delay, message }: BalloonProps) => {
         </motion.div>
       )}
       
-      {showMessage && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0 }}
-          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-lg shadow-lg text-xs text-center z-50 min-w-max"
-        >
-          {message || "Happy Birthday Peya! 🎉"}
-        </motion.div>
-      )}
+{showMessage && (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0 }}
+    className={`absolute bottom-24 transform bg-white p-2 rounded-lg shadow-lg text-xs text-center z-50 min-w-max
+      ${parseInt(x) > 60 ? 'right-0 translate-x-full' : 'left-0 -translate-x-0'}
+    `}
+  >
+    {message || "Happy Birthday Peya! 🎉"}
+  </motion.div>
+)}
+
     </div>
   );
 };

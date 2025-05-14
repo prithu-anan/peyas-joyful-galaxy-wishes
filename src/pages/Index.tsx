@@ -6,6 +6,7 @@ import Confetti from '../components/Confetti';
 import Balloons from '../components/Balloons';
 import PhotoGallery from '../components/PhotoGallery';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import CakeCanvas from '@/components/CakeCanvas';
 
 const Index = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -81,28 +82,9 @@ const Index = () => {
             </motion.header>
             
             {/* Cake Section (Placeholder) */}
-            <motion.div 
-              className="bg-white bg-opacity-80 backdrop-blur-md rounded-xl shadow-xl p-6 mb-8"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.7 }}
-            >
-              <h2 className="text-2xl font-dancing font-bold text-center bg-gradient-to-r from-birthday-purple to-birthday-pink bg-clip-text text-transparent mb-4">
-                A Special Cake for a Special Day
-              </h2>
-              <div className="w-full max-w-md mx-auto">
-                <AspectRatio ratio={4/3} className="bg-muted rounded-md overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center p-4">
-                      <div className="text-4xl mb-2">🎂</div>
-                      <p className="text-sm text-muted-foreground">
-                        Your beautiful cake will appear here
-                      </p>
-                    </div>
-                  </div>
-                </AspectRatio>
-              </div>
-            </motion.div>
+            <div className="h-[300px] w-full mt-5">
+              <CakeCanvas />
+            </div>
             
             {/* Special Message */}
             <motion.div 
@@ -117,7 +99,7 @@ const Index = () => {
               <p className="text-gray-700 mb-4 text-center">
                 Dear Peya, as you pursue your dream of becoming a doctor, may your birthday be 
                 as amazing as the lives you're destined to touch. Your dedication, compassion, and 
-                brilliance inspire us all.
+                brilliance always inspires me.
               </p>
               <p className="text-gray-700 mb-4 text-center">
                 The journey through medical college is challenging, but you're conquering it with grace. 
@@ -140,8 +122,8 @@ const Index = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.9, duration: 0.7 }}
             >
-              <h2 className="text-2xl font-dancing font-bold text-center bg-gradient-to-r from-birthday-purple to-birthday-pink bg-clip-text text-transparent mb-4">
-                Your Future Tools
+              <h2 className="text-2xl font-dancing font-bold text-center bg-gradient-to-r from-birthday-purple to-birthday-pink bg-clip-text text-transparent">
+                Don't give up on your dreams!
               </h2>
               <Medical3DModel />
             </motion.div>
@@ -163,8 +145,8 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5, duration: 0.7 }}
             >
-              <h2 className="text-2xl font-dancing font-bold text-center bg-gradient-to-r from-birthday-teal to-birthday-orange bg-clip-text text-transparent mb-4">
-                Pop the Balloons for Surprises!
+              <h2 className="text-2xl font-dancing font-bold text-center bg-gradient-to-r from-birthday-teal to-birthday-orange bg-clip-text text-transparent">
+                Pop the Balloons!
               </h2>
               <Balloons />
             </motion.div>

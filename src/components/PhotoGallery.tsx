@@ -9,10 +9,10 @@ interface Photo {
 
 const PhotoGallery = () => {
   const photos: Photo[] = [
-    { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901", alt: "Placeholder 1" },
-    { src: "https://images.unsplash.com/photo-1500673922987-e212871fec22", alt: "Placeholder 2" },
-    { src: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07", alt: "Placeholder 3" },
-    { src: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb", alt: "Placeholder 4" },
+    { src: "/public/images/doctor.jpg", alt: "Placeholder 1" },
+    { src: "/public/images/cat-mom.jpg", alt: "Placeholder 2" },
+    { src: "/public/images/joyful.jpg", alt: "Placeholder 3" },
+    { src: "/public/images/pretty.jpg", alt: "Placeholder 4" },
   ];
   
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -61,16 +61,16 @@ const PhotoGallery = () => {
     >
       <div className="text-center mb-6">
         <h2 className="text-2xl font-dancing font-bold bg-gradient-to-r from-birthday-purple to-birthday-pink bg-clip-text text-transparent">
-          Memories with Peya
+          Celebrating Peya
         </h2>
         <p className="text-sm text-gray-600 mt-2">
-          Replace these images with your photos
+          Someone who is
         </p>
       </div>
       
       <div 
         ref={containerRef}
-        className="w-full h-64 relative overflow-hidden rounded-xl"
+        className="w-full relative overflow-hidden rounded-xl aspect-[3/4] sm:aspect-[16/9]"
         onTouchStart={(e) => {
           const touch = e.touches[0];
           containerRef.current?.setAttribute('data-start-x', touch.clientX.toString());
@@ -100,10 +100,10 @@ const PhotoGallery = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40 flex items-end p-4">
             <p className="text-white font-dancing text-xl">
-              {currentIndex === 0 && "The aspiring doctor"}
-              {currentIndex === 1 && "Celebrations with Peya"}
-              {currentIndex === 2 && "Special memories"}
-              {currentIndex === 3 && "Adventures together"}
+              {currentIndex === 0 && "An aspiring doctor"}
+              {currentIndex === 1 && "A cat mom"}
+              {currentIndex === 2 && "A joyful soul"}
+              {currentIndex === 3 && "The prettiest of them all"}
             </p>
           </div>
         </motion.div>
