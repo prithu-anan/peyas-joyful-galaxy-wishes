@@ -76,11 +76,11 @@ const Balloon = ({ color, x, delay, message }: BalloonProps) => {
 
 const Balloons = () => {
   const balloons = [
-    { color: "#9b87f5", x: "15%", delay: 0, message: "Happy Birthday! 🎂" },
-    { color: "#D946EF", x: "30%", delay: 0.5, message: "Future Dr. Peya! 👩‍⚕️" },
-    { color: "#0EA5E9", x: "45%", delay: 1, message: "May all your wishes come true! ✨" },
-    { color: "#F97316", x: "60%", delay: 1.5, message: "Here's to your success! 🎓" },
-    { color: "#FDE68A", x: "75%", delay: 2, message: "Sending love on your special day! ❤️" }
+    { color: "#9b87f5", x: "10%", delay: 0, message: "Happy Birthday! 🎂" },
+    { color: "#D946EF", x: "25%", delay: 0.5, message: "Future Dr. Peya! 👩‍⚕️" },
+    { color: "#0EA5E9", x: "40%", delay: 1, message: "May all your wishes come true! ✨" },
+    { color: "#F97316", x: "55%", delay: 1.5, message: "Here's to your success! 🎓" },
+    { color: "#FDE68A", x: "70%", delay: 2, message: "Sending love on your special day! ❤️" }
   ];
   
   return (
