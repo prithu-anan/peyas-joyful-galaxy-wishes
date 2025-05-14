@@ -5,59 +5,21 @@ import Medical3DModel from '../components/Medical3DModel';
 import Confetti from '../components/Confetti';
 import Balloons from '../components/Balloons';
 import PhotoGallery from '../components/PhotoGallery';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Index = () => {
   const [showIntro, setShowIntro] = useState(true);
-  const [birthdayDate] = useState(new Date('2025-05-15'));
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-  
-  const calcTimeLeft = () => {
-    const now = new Date();
-    const difference = birthdayDate.getTime() - now.getTime();
-    
-    if (difference > 0) {
-      setTimeLeft({
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      });
-    } else {
-      // It's her birthday or after!
-      setTimeLeft({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-      });
-    }
-  };
   
   useEffect(() => {
-    calcTimeLeft();
-    const timer = setInterval(calcTimeLeft, 1000);
-    
     // After intro animation
     const introTimer = setTimeout(() => {
       setShowIntro(false);
     }, 3500);
     
     return () => {
-      clearInterval(timer);
       clearTimeout(introTimer);
     };
   }, []);
-  
-  // Check if it's her birthday
-  const isBirthday = timeLeft.days === 0 && 
-                      timeLeft.hours === 0 && 
-                      timeLeft.minutes === 0 && 
-                      timeLeft.seconds === 0;
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-birthday-soft-pink via-white to-birthday-soft-peach">
@@ -118,49 +80,28 @@ const Index = () => {
               </motion.p>
             </motion.header>
             
-            {/* Countdown or Birthday Message */}
+            {/* Cake Section (Placeholder) */}
             <motion.div 
               className="bg-white bg-opacity-80 backdrop-blur-md rounded-xl shadow-xl p-6 mb-8"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.7 }}
             >
-              {!isBirthday ? (
-                <div className="text-center">
-                  <h2 className="text-xl font-bold text-birthday-purple mb-4">Countdown to Peya's Special Day</h2>
-                  <div className="grid grid-cols-4 gap-2">
-                    <div className="flex flex-col items-center">
-                      <div className="text-2xl font-bold text-birthday-pink">{timeLeft.days}</div>
-                      <div className="text-xs uppercase text-gray-500">Days</div>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <div className="text-2xl font-bold text-birthday-teal">{timeLeft.hours}</div>
-                      <div className="text-xs uppercase text-gray-500">Hours</div>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <div className="text-2xl font-bold text-birthday-orange">{timeLeft.minutes}</div>
-                      <div className="text-xs uppercase text-gray-500">Mins</div>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <div className="text-2xl font-bold text-birthday-purple">{timeLeft.seconds}</div>
-                      <div className="text-xs uppercase text-gray-500">Secs</div>
+              <h2 className="text-2xl font-dancing font-bold text-center bg-gradient-to-r from-birthday-purple to-birthday-pink bg-clip-text text-transparent mb-4">
+                A Special Cake for a Special Day
+              </h2>
+              <div className="w-full max-w-md mx-auto">
+                <AspectRatio ratio={4/3} className="bg-muted rounded-md overflow-hidden">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-center p-4">
+                      <div className="text-4xl mb-2">🎂</div>
+                      <p className="text-sm text-muted-foreground">
+                        Your beautiful cake will appear here
+                      </p>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <div className="text-center">
-                  <motion.h2 
-                    className="text-2xl font-bold text-birthday-pink mb-4"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ repeat: Infinity, duration: 2 }}
-                  >
-                    🎂 It's Your Birthday Today! 🎂
-                  </motion.h2>
-                  <p className="text-gray-700">
-                    Wishing you a day filled with joy, laughter, and unforgettable moments!
-                  </p>
-                </div>
-              )}
+                </AspectRatio>
+              </div>
             </motion.div>
             
             {/* Special Message */}
@@ -192,7 +133,7 @@ const Index = () => {
               </motion.div>
             </motion.div>
             
-            {/* 3D Medical Model */}
+            {/* 3D Medical Models */}
             <motion.div 
               className="bg-white rounded-xl shadow-xl p-6 mb-8"
               initial={{ opacity: 0, scale: 0.8 }}
