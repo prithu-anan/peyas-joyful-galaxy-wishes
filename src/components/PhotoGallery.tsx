@@ -9,10 +9,10 @@ interface Photo {
 
 const PhotoGallery = () => {
   const photos: Photo[] = [
-    { src: "/public/images/doctor.jpg", alt: "Placeholder 1" },
-    { src: "/public/images/cat-mom.jpg", alt: "Placeholder 2" },
-    { src: "/public/images/joyful.jpg", alt: "Placeholder 3" },
-    { src: "/public/images/pretty.jpg", alt: "Placeholder 4" },
+    { src: "/images/doctor.jpg", alt: "aspiring doctor" },
+    { src: "/images/cat-mom.jpg", alt: "cat mom" },
+    { src: "/images/joyful.jpg", alt: "joyful soul" },
+    { src: "/images/pretty.jpg", alt: "prettiest" },
   ];
   
   const [currentIndex, setCurrentIndex] = useState(0);
