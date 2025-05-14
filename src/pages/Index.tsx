@@ -82,8 +82,13 @@ const Index = () => {
             </motion.header>
             
             {/* Cake Section (Placeholder) */}
-            <div className="h-[300px] w-full mt-5">
-              <CakeCanvas />
+            <div className="h-[300px] w-full mt-5 flex items-center justify-center">
+              {/* <CakeCanvas /> */}
+              <img
+                src="/cake-image.webp"
+                alt="Birthday Cake"
+                className="h-full object-cover rounded-xl"
+              />
             </div>
             
             {/* Special Message */}
