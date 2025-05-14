@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vintage Injection Syringe
+* source:	https://sketchfab.com/3d-models/vintage-injection-syringe-6801fdf5483740f0903fb6ed396951c8
+* author:	mebuyukbulut (https://sketchfab.com/mebuyukbulut)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vintage Injection Syringe" (https://sketchfab.com/3d-models/vintage-injection-syringe-6801fdf5483740f0903fb6ed396951c8) by mebuyukbulut (https://sketchfab.com/mebuyukbulut) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
