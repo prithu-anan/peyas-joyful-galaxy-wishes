@@ -116,7 +116,7 @@ const Index = () => {
             </motion.div>
             
             {/* 3D Medical Models */}
-            <motion.div 
+            {/* <motion.div 
               className="bg-white rounded-xl shadow-xl p-6 mb-8"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -126,7 +126,7 @@ const Index = () => {
                 Don't give up on your dreams!
               </h2>
               <Medical3DModel />
-            </motion.div>
+            </motion.div> */}
             
             {/* Photo Gallery */}
             <motion.div 
